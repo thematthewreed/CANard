@@ -3,8 +3,7 @@ from canard.hw import cantact
 import sys
 
 dev = cantact.CantactDev(sys.argv[1])
-
-dev.ser.write('S0\r'.encode())
+dev.set_bitrate(1000000)
 dev.start()
 count = 0
 while True:

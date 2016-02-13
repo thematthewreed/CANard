@@ -13,12 +13,24 @@ class CantactDev:
         self.ser.write('C\r'.encode())
 
     def set_bitrate(self, bitrate):
-        if bitrate == 125000:
+        if bitrate == 10000:
             self.ser.write('S0\r'.encode())
-        elif bitrate == 250000:
+        elif bitrate == 20000:
             self.ser.write('S1\r'.encode())
-        elif bitrate == 500000:
+        elif bitrate == 50000:
             self.ser.write('S2\r'.encode())
+        elif bitrate == 100000:
+            self.ser.write('S3\r'.encode())
+        elif bitrate == 125000:
+            self.ser.write('S4\r'.encode())
+        elif bitrate == 250000:
+            self.ser.write('S5\r'.encode())
+        elif bitrate == 500000:
+            self.ser.write('S6\r'.encode())
+        elif bitrate == 750000:
+            self.ser.write('S7\r'.encode())
+        elif bitrate == 1000000:
+            self.ser.write('S8\r'.encode())
         else:
             raise ValueError("Bitrate not supported")
 
@@ -26,7 +38,7 @@ class CantactDev:
         # receive characters until a newline (\r) is hit
         rx_str = ""
         while rx_str == "" or rx_str[-1] != '\r':
-            rx_str = rx_str + self.ser.read()
+            rx_str = rx_str + self.ser.read().decode('UTF-8', 'ignore')
 
         # parse the id, create a frame
         frame_id = int(rx_str[1:4], 16)
