@@ -2,7 +2,7 @@
 CANard
 ======
 
-[![Build Status](http://travis-ci.org/normaldotcom/CANard.svg?branch=master)](https://travis-ci.org/normaldotcom/CANard)
+[![Build Status](http://travis-ci.org/normaldotcom/CANard.png?branch=master)](https://travis-ci.org/normaldotcom/CANard)
 
 CANard is a library for dealing with Controller Area Network (CAN) data from
 Python.
