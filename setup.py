@@ -5,7 +5,7 @@ setup(
     version='0.2.1',
     author='Eric Evenchick',
     author_email='eric@evenchick.com',
-    packages=['canard', 'canard.test', 'canard.hw', 'canard.utils', 'canard.proto'],
+    packages=['canard', 'canard.test', 'canard.hw', 'canard.utils', 'canard.proto', 'canard.file'],
     scripts=[],
     url='http://github.com/ericevenchick/CANard',
     license='GPLv3',
