@@ -21,7 +21,11 @@ class JsonDbParser():
                     if 'offset' in sig:
                         s.offset = int(sig['offset'])
                     if 'factor' in sig:
-                        s.factor = int(sig['factor'])
+                        s.factor = sig['factor']
+
+                    # parse unit if set
+                    if 'unit' in sig:
+                        s.unit = sig['unit']
 
                     # add this signal to the message
                     m.add_signal(s, int(start_bit))
