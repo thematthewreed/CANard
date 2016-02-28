@@ -4,14 +4,9 @@ canard.test package
 Submodules
 ----------
 
-canard.test.can_test module
----------------------------
+.. toctree::
 
-.. automodule:: canard.test.can_test
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
+   canard.test.can_test
 
 Module contents
 ---------------

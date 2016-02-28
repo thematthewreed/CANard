@@ -4,46 +4,13 @@ canard.hw package
 Submodules
 ----------
 
-canard.hw.cantact module
-------------------------
+.. toctree::
 
-.. automodule:: canard.hw.cantact
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-canard.hw.logplayer module
---------------------------
-
-.. automodule:: canard.hw.logplayer
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-canard.hw.loopback module
--------------------------
-
-.. automodule:: canard.hw.loopback
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-canard.hw.peak module
----------------------
-
-.. automodule:: canard.hw.peak
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-canard.hw.socketcan module
---------------------------
-
-.. automodule:: canard.hw.socketcan
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
+   canard.hw.cantact
+   canard.hw.logplayer
+   canard.hw.loopback
+   canard.hw.peak
+   canard.hw.socketcan
 
 Module contents
 ---------------

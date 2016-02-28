@@ -4,14 +4,9 @@ canard.utils package
 Submodules
 ----------
 
-canard.utils.queue module
--------------------------
+.. toctree::
 
-.. automodule:: canard.utils.queue
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
+   canard.utils.queue
 
 Module contents
 ---------------
