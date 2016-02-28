@@ -70,7 +70,7 @@ class Frame(object):
         # return bytes up to dlc length, pad with zeros
         data_len = min(self.dlc, len(self._data))
         result = self._data[:data_len]
-#        result.extended([0] * (8 - data_len))
+        result.extend([0] * (8 - data_len))
         return result
 
     @data.setter
