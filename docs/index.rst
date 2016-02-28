@@ -1,22 +1,48 @@
-.. CANard documentation master file, created by
-   sphinx-quickstart on Sun Feb 28 14:13:48 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+canard package
+==============
 
-Welcome to CANard's documentation!
-==================================
-
-Contents:
+Subpackages
+-----------
 
 .. toctree::
-   :maxdepth: 2
+
+    canard.hw
+    canard.proto
+    canard.test
+    canard.utils
+
+Submodules
+----------
+
+canard.bus module
+-----------------
+
+.. automodule:: canard.bus
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+canard.can module
+-----------------
+
+.. automodule:: canard.can
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+canard.log module
+-----------------
+
+.. automodule:: canard.log
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 
+Module contents
+---------------
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+.. automodule:: canard
+    :members:
+    :undoc-members:
+    :show-inheritance:
