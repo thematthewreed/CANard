@@ -6,6 +6,10 @@ CANard
     :target: http://travis-ci.org/normaldotcom/CANard
     :alt: Build Status
 
+.. image:: https://readthedocs.org/projects/canard/badge/?version=latest
+    :target: http://canard.readthedocs.org/en/latest/?badge=latest
+    :alt: Documentation Status
+
 CANard is a library for dealing with Controller Area Network (CAN) data from
 Python.
 
