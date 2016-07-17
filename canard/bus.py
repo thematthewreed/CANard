@@ -2,7 +2,9 @@ from . import can
 
 class Bus:
     # message that belong to this bus
-    _messages = []
+
+    def __init__(self):
+        self._messages = []
 
     def add_message(self, message):
         assert isinstance(message, Message), 'invalid message'
@@ -32,11 +34,11 @@ class Bus:
 
 class Message(object):
     # signals that belong to this message, indexed by start bit
-    _signals = {}
 
     def __init__(self, name, id):
         self.name = name
         self.id = id
+        self._signals = {}
 
     def add_signal(self, signal, start_bit):
         assert isinstance(signal, Signal), 'invalid signal'
