@@ -6,16 +6,16 @@ class JsonDbParser():
         with open(filename, 'r') as f:
             db = json.load(f)
 
-            # create a database
+            # create a message database
             msgdb = messaging.MessageDatabase()
             for msg in db['messages']:
                 # create a message
-                m = bus.Message(msg['name'], int(msg['id'], 0))
+                m = messaging.Message(msg['name'], int(msg['id'], 0))
 
                 # iterate over signals
                 for start_bit, sig in msg['signals'].items():
                     # create a signal
-                    s = bus.Signal(sig['name'], sig['bit_length'])
+                    s = messaging.Signal(sig['name'], sig['bit_length'])
 
                     # parse offset and factor if set
                     if 'offset' in sig:
@@ -30,7 +30,7 @@ class JsonDbParser():
                     # add this signal to the message
                     m.add_signal(s, int(start_bit))
 
-                # add this message to the bus
+                # add this message to the database
                 msgdb.add_message(m)
 
         return msgdb
