@@ -1,13 +1,13 @@
 import json
-from .. import can, bus
+from .. import can, messaging
 
 class JsonDbParser():
     def parse(self, filename):
         with open(filename, 'r') as f:
             db = json.load(f)
 
-            # create a bus for this database
-            b = bus.Bus()
+            # create a database
+            msgdb = messaging.MessageDatabase()
             for msg in db['messages']:
                 # create a message
                 m = bus.Message(msg['name'], int(msg['id'], 0))
@@ -31,6 +31,6 @@ class JsonDbParser():
                     m.add_signal(s, int(start_bit))
 
                 # add this message to the bus
-                b.add_message(m)
+                msgdb.add_message(m)
 
-        return b
+        return msgdb
