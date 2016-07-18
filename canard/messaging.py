@@ -1,14 +1,21 @@
+""" messaging.py
+
+Defines messages and message interfaces for storing and retrieving CAN frames
+
+"""
+
 from . import can
 import math
 
 class MessageDatabase:
+    """ Database of CAN messages """
     
     def __init__(self):
         # message that belong to this database
         self._messages = []
     
     def __getattr__(self, name):
-        return self.__lookup_message(name)
+        return self.lookup_message(name)
 
     def add_message(self, message):
         assert isinstance(message, Message), 'invalid message'
@@ -24,7 +31,7 @@ class MessageDatabase:
         except ValueError:
             raise ValueError('Message %s is not in database' % message)
     
-    def __lookup_message(self, name):
+    def lookup_message(self, name):
         for message in self._messages:
             if message.name == name:
                 return message
@@ -44,7 +51,7 @@ class MessageDatabase:
 class Message(object):
     
     def __getattr__(self, name):
-        return self.__lookup_signal(name)
+        return self.lookup_signal(name)
 
     def __init__(self, name, id):
         self.name = name
@@ -60,7 +67,7 @@ class Message(object):
     def remove_signal(self, signal):
         pass
     
-    def __lookup_signal(self, name):
+    def lookup_signal(self, name):
         for start_bit, signal in self._signals.items():
             if signal.name == name:
                 return signal
