@@ -162,7 +162,7 @@ class Signal:
     @property
     def value(self):
         # convert from raw value to engineering units
-        return ((self._value * self.factor) + self.offset)
+        return ((self._value * self.factor) - self.offset)
     
     @value.setter
     def value(self, value):
